@@ -14,8 +14,8 @@ class Employee:
 
     def __init__(self, fname, lname, age, salary):
         """This is the constructor for the Employee.
-        Instance variables like fname, lname..salary
-        are uique to each instance."""
+        Instance variables like fname, lname...salary
+        are unique to each instance."""
         self.fname = fname
         self.lname = lname
         self.email = fname + '.' + lname + '@company.com'
@@ -90,6 +90,7 @@ class Manager(Employee):
     def list_emp(self):
         for emp in self.employees:
             print(emp.fullname())
+
 
 emp_1 = Employee('John', 'Leon', 25, 90000)
 emp_2 = Employee('hn', 'on', 26, 90000)
