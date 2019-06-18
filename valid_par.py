@@ -4,13 +4,14 @@ def is_valid(paren):
     for i in paren:
         if i == '(':
             stack.append(i)
-        elif i == ')' and len(sta:
+        elif i == ')' and len(stack):
             stack.pop()
         else:
             return False
     if len(stack) == 0:
         return True
     return False
+
 
 if __name__ == "__main__":
     while True:
