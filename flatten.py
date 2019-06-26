@@ -1,3 +1,6 @@
+import collections
+
+
 class DataIterator:
     def __init__(self, d):
         self.new = []
@@ -47,18 +50,35 @@ def helper(a, n):
             n.append(i)
 
 
+def gene_flatten(arr):
+    """ Return flattened generator object.
+
+    Arguments:
+        arr {list[*list]} -- contains list of lists to flatten
+    """
+    for i in arr:
+        if isinstance(i, collections.Iterable) and\
+                not isinstance(i, (str, bytes)):
+            gene_flatten(i)
+        else:
+            yield i
+
+
 if __name__ == "__main__":
     lis = [[1], 2, [[3, 4], 5], [[[]]], [[[6]]], 7, 8, []]
+
     flat_arr = flatten(lis)
-    gen_arr = DataIterator(lis)
-    print(gen_arr.next())
-    # print(gen_arr.has_next())
-    print(gen_arr.next())
-    # print(gen_arr.has_next())
-    print(gen_arr.next())
-    print(gen_arr.next())
-    print(gen_arr.next())
-    print(gen_arr.next())
-    print(gen_arr.next())
-    print(gen_arr.next())
     print(flat_arr)
+
+    iter_arr = DataIterator(lis)
+    # print(iter_arr.next())
+    # print(iter_arr.has_next())
+    # print(iter_arr.next())
+    # print(iter_arr.has_next())
+
+    gen_arr = gene_flatten(lis)
+    print(next(gen_arr))
+    print(next(gen_arr))
+    print(next(gen_arr))
+    print(next(gen_arr))
+    print(next(gen_arr))

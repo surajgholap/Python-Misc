@@ -1,5 +1,6 @@
 import sys
 
+
 # Function that recursively solves tower of hanoi
 def tower(n, fr, to, sp):  # f - from , t - to, s - spare
     if n == 1:

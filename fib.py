@@ -1,13 +1,14 @@
-a = 1
-b = 1
-# print(a)
-# print(b)
-# for i in range(2, 10):
-#     c = a + b
-#     print(c)
-#     a = b
-#     b = c
-# print(c)
+def fib_iter(n):
+    a = 1
+    b = 1
+    if n == 1 or n == 2:
+        return a
+    for i in range(2, n):
+        c = a + b
+        res = c
+        a = b
+        b = c
+    return res
 
 
 def fib_memo(n, memo):
@@ -22,7 +23,7 @@ def fib_memo(n, memo):
 
 
 def rec_fib(n):
-    print("*")
+    # print("*")
     if n == 1 or n == 2:
         res = 1
     else:
@@ -34,6 +35,16 @@ def fib_driver(num):
     m = [0]*(num+1)
     return fib_memo(num, m)
 
+
 print(rec_fib(6))
 # print(rec_fib(10))
+
 print(fib_driver(10))
+print()
+print(fib_iter(1))
+print(fib_iter(2))
+print(fib_iter(3))
+print(fib_iter(4))
+print(fib_iter(5))
+print(fib_iter(6))
+print(fib_iter(7))
