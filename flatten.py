@@ -57,16 +57,15 @@ def gene_flatten(arr):
         arr {list[*list]} -- contains list of lists to flatten
     """
     for i in arr:
-        if isinstance(i, collections.Iterable) and\
-                not isinstance(i, (str, bytes)):
-            gene_flatten(i)
+        if isinstance(i, list):
+            yield from gene_flatten(i)
         else:
             yield i
 
 
 if __name__ == "__main__":
     lis = [[1], 2, [[3, 4], 5], [[[]]], [[[6]]], 7, 8, []]
-
+    print("Original list is {}".format(lis))
     flat_arr = flatten(lis)
     print(flat_arr)
 
@@ -75,10 +74,12 @@ if __name__ == "__main__":
     # print(iter_arr.has_next())
     # print(iter_arr.next())
     # print(iter_arr.has_next())
-
+    print()
     gen_arr = gene_flatten(lis)
     print(next(gen_arr))
     print(next(gen_arr))
     print(next(gen_arr))
     print(next(gen_arr))
-    print(next(gen_arr))
+    print()
+    for i in gen_arr:
+        print(i)

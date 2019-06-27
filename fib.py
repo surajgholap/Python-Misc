@@ -5,10 +5,10 @@ def fib_iter(n):
         return a
     for i in range(2, n):
         c = a + b
-        res = c
+        # res = c
         a = b
         b = c
-    return res
+    return c
 
 
 def fib_memo(n, memo):

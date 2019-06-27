@@ -4,7 +4,7 @@ def is_valid(paren):
     for i in paren:
         if i == '(':
             stack.append(i)
-        elif i == ')' and len(stack):
+        elif i == ')' and stack:
             stack.pop()
         else:
             return False
