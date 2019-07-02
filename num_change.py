@@ -22,6 +22,8 @@ def num_change(n, total):
                 else:
                     total[i][j] = total[i-1][j] + total[i][j-i]
     return total[n][n]
+
+
 if __name__ == "__main__":
     a = helper(4)
     print(a)

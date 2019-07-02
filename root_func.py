@@ -32,6 +32,8 @@ def square_root_bin(n):
                 stop = mid - 1
         return ans
 
+
 if __name__ == "__main__":
     print(square_root(15))
     print(square_root_bin(15))
+    print(root_try(15))

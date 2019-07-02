@@ -1,7 +1,8 @@
 class Listnode:
-    """Listnode represents a node of a linked list. 
+    """Listnode represents a node of a linked list.
     .data contains the value of the node and .next
     contains the address of next node."""
+
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
@@ -28,6 +29,7 @@ def insert_after(L, new_L):
 
 def delete_after(L):
     L.next = L.next.next
+
 
 yo = Listnode(21)
 # print(yo.val)

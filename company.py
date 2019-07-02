@@ -1,4 +1,5 @@
-S = 'John Do-e; John Do-e; Peter Benjamin Parker; Mary Jane Watson-Parker; John Elvis Doe; John Evan Doe; Jane Doe; Peter Brian Parker'
+S = 'John Do-e; John Do-e; Peter Benjamin Parker; Mary Jane Watson-Parker;\
+ John Elvis Doe; John Evan Doe; Jane Doe; Peter Brian Parker'
 C = 'Example'
 
 
@@ -19,7 +20,7 @@ def solution(S, C):
         while temp in new:
             temp = temp1
             temp = temp + str(count)
-            count += 1       
+            count += 1
         new.append(temp)
         temp = temp + "@" + comp + ".com>"
         new2.append(temp)
