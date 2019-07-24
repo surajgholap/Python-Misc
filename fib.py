@@ -36,6 +36,16 @@ def fib_driver(num):
     return fib_memo(num, m)
 
 
+def fib_var_num(num):
+    if num <= 3:
+        return 1
+    else:
+        sum = 0
+        for i in range(1, 3+1):
+            sum += fib_var_num(num-i)
+        return sum
+
+
 print(rec_fib(6))
 # print(rec_fib(10))
 
@@ -48,3 +58,7 @@ print(fib_iter(4))
 print(fib_iter(5))
 print(fib_iter(6))
 print(fib_iter(7))
+print(fib_var_num(3))
+print(fib_var_num(4))
+print(fib_var_num(5))
+print(fib_var_num(6))
