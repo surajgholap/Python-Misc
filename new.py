@@ -16,8 +16,9 @@
 #       }
 
 #       return res;
-       
+
 # }
+
 
 def firstBag(bags):
     ans = ""

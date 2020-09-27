@@ -19,6 +19,7 @@ def quicksort(l, h, a):
         quicksort(ind+1, h, a)
     # return a
 
+
 if __name__ == "__main__":
     arr = [3, 5, 1, 7, 8]
     n = len(arr)-1

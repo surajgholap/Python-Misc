@@ -7,10 +7,10 @@ def distribute(n, k):
         parts {int} -- Number of parts in which to divide
     """
 
-    l = range(n)
+    lis = range(n)
     new = []
     for i in range(k):
-        new.append(list(l[i::k]))
+        new.append(list(lis[i::k]))
     return new
 
 

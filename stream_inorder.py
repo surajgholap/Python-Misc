@@ -8,5 +8,5 @@ while True:
         if heapq.heappop(nums) == mi:
             print(mi)
             mi += 1
-    except:
+    except EOFError:
         continue

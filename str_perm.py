@@ -2,7 +2,9 @@ def perm(l, t='', n=[]):
     if len(l) == 0:
         n.append(t)
     else:
-        [perm(l[:i] + l[i+1:], t+l[i], n) for i in range(len(l))]
+        # [perm(l[:i] + l[i+1:], t+l[i], n) for i in range(len(l))]
+        for i in range(len(l)):
+            perm(l[:i] + l[i+1:], t + l[i], n)
     return n
 
 
