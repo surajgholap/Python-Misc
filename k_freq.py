@@ -8,6 +8,7 @@ def k_freq(d, k):
     except:
         return "K out of range"
 
+
 if __name__ == "__main__":
     lis = [4, 4, 4, 4, 4, 5]
     dic = {}

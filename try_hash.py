@@ -3,7 +3,7 @@ def make_map(nums):
     for i in nums:
         try:
             mao[i] += 1
-        except:
+        except KeyError:
             mao[i] = 1
     return mao
 
