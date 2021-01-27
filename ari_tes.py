@@ -50,9 +50,15 @@ def find_pattern(n):
     return True
 
 
+def try_num_string(inp):
+    for i in str(inp):
+        print(int(i))
+
+
 if __name__ == "__main__":
     # rec_conversion(8)
     print(find_pattern(2))
     print(find_pattern(3))
     print(find_pattern(4))
     print(find_pattern(5))
+    # try_num_string(12343)
